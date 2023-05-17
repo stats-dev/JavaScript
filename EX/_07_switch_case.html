@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch조건문</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        const box = document.getElementsByClassName("box")[0]; // 배열의 첫번째 요소 출력
+        const month = prompt("현재 몇 월입니까?");
+
+        // 참고) // 이렇게 문자열을 숫자로 변환후에 수행하면 문자열로 case에 입력하지 않아도 된다.
+        // month = parseInt(month);
+        // switch(month) {
+        //     case 1: case 2: case 12:
+        //         alert("겨울입니다.");
+        //         box.style.background = 'skyblue';
+        //         break;
+        //     case 3: case 4: case 5:
+        //         alert("겨울입니다.");
+        //         box.style.background = 'skyblue';
+        //         break;
+            
+        // }
+
+        console.log(typeof month);
+        // 스위치 케이스에서는 문자열 값을 받아야하므로, 타입에 맞게 입력해야 정상 작동을 한다.
+        // 여기서는 prompt에서 문자열을 입력받도록 했으니 문자열을 넣는다. string으로 typeof로 출력.
+
+        switch(month) {
+            // 이렇게 스위치를 묶을 수 있다.
+            case "1": case "2": case "12":
+                alert("겨울입니다.");
+                box.style.background = 'skyblue';
+                break;
+            case "3": case "4": case "5":
+                alert("봄입니다.");
+                box.style.background = 'lightgreen';
+                break;
+            case "6": case "7": case "8":
+                alert("여름입니다.");
+                box.style.background = 'red';
+                break;
+            case "9": case "10": case "11":
+                alert("가을입니다.");
+                box.style.background = 'brown';
+                break;
+            default:
+                alert("잘못된 입력입니다.");
+                break;                  
+        }
+
+    </script>
+</body>
+</html>

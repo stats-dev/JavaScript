@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+</head>
+<body>
+    <div class="container"></div>
+    <script>
+        let sum = 0;
+        const quest = "";
+        while(true) {
+            // prompt로 사용자 입력값 받기
+            const input = document.getElementsByClassName("container")[0];
+            const quest = prompt('숫자를 입력하시오. (end: 종료)');
+            if (quest == "end") {
+                break;
+            }
+            sum += parseInt(quest);
+        }
+        document.write(quest);
+        document.write(sum);
+        
+        // end면 종료
+        // 아니면 parseInt로 숫자형으로 변경해서 합산
+        // 합산값을 계속 출력
+        // document.write + br 출력
+    </script>
+</body>
+</html>
