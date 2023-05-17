@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var의 문제점`</title>
+</head>
+<body>
+    <script>
+        //3. var 호이스팅: 선언하지 않았는데 주변에 선언된 걸 땡겨서 사용한다. (콘솔 제외)
+        x = 100;
+        
+        var x; // 선언을 함. 문제는 위치를 알기 어려워짐.
+
+        console.log(x);
+
+        // let은 호이스팅이 불가하게 만들어짐.
+        // ES5 까지는 var만 사용
+        
+    </script>
+</body>
+</html>
