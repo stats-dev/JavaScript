@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 당첨 확인</title>
+</head>
+<body>
+    <script>
+
+        const randNum = Math.floor(Math.random() * 100 + 1);
+        console.log(randNum);
+        console.log(`보너스번호 : ${randNum}`);
+
+        document.write('이번 주 로또 당첨 번호는 : ')
+        arr = [];
+        user = [];
+
+        for(let i = 0; i < 6; i++) {
+            const rand = Math.floor(Math.random() * 45 + 1);
+            arr.push(rand);
+            // document.write(rand);
+            // document.write(', ');
+
+            if(arr[i-1] === arr[i]) {
+                i--;
+            }
+            document.write(rand);
+            document.write(', ');
+
+        }
+        
+        document.write('보너스번호 : ');
+        const bonus = Math.floor(Math.random() * 45 + 1);
+        document.write(bonus + '</br>');
+        arr.push(bonus);
+
+        document.write('구입한 로또 번호 : ');
+        for(let i = 0; i < 6; i++) {
+            const input = Math.floor(Math.random() * 45 + 1);
+            // document.write(input);
+            user.push(input);
+            if(user[i-1] === user[i]) {
+                i--;
+            }
+        }
+        document.write(user);
+
+        for(let i = 0; i < user.length; i++ ){
+            if(user[i] in arr) {
+                document.write('</br> 당첨!')
+            } else {
+                document.write('</br> 꽝!');
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
